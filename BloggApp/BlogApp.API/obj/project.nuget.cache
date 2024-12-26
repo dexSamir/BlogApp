@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "LRypmzc8f1mJDvR7+hYowCUS2yuC/g1x5KTKsv2bMAB2kWi0c4fWF+reIK3XCxtvQiKmKX6B2DDNPwcPx65mAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ll Novbe\\Desktop\\All Codes\\BloggApp\\BlogApp.API\\BlogApp.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\ll Novbe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
