@@ -1,0 +1,12 @@
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/bin/Debug/net8.0/BlogApp.Core.deps.json
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/bin/Debug/net8.0/BlogApp.Core.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/bin/Debug/net8.0/BlogApp.Core.pdb
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.sourcelink.json
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/refint/BlogApp.Core.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/BlogApp.Core.pdb
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.Core/obj/Debug/net8.0/ref/BlogApp.Core.dll
