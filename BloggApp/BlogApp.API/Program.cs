@@ -1,4 +1,5 @@
-﻿using BlogApp.DAL.Context;
+﻿using BlogApp.DAL;
+using BlogApp.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -17,8 +18,9 @@ namespace TogrulAPI
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddDbContext<BlogAppDbContext>(opt =>
-                opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL"))); 
-
+                opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
+            builder.Services.AddRepositories();
+ 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
