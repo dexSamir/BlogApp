@@ -12,8 +12,16 @@ namespace BlogApp.DAL
 		{
 			services.AddScoped<ICategoryRepository, CategoryRepository>();
 			services.AddScoped<IUserRepository, UserRepository>();
+
             return services;
 		}
-	}
+        //public static IServiceCollection AddServices(this IServiceCollection services)
+        //{
+        //    services.AddScoped<, UserService>();
+
+        //    return services;
+        //}
+
+    }
 }
 

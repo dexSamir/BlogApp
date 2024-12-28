@@ -14,6 +14,13 @@ namespace BlogApp.DAL.Repositories
             _context = context; 
         }
 
+        public async Task AddAysnc(User user)
+            => await _context.Users.AddAsync(user); 
+
+        public async Task<bool> ExistsByUsername(string username)
+            => await _context.Users.AnyAsync(x => x.Username == username);
+
+
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
             return await _context.Users.Where(x => x.Username == username).FirstOrDefaultAsync();
