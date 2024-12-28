@@ -1,7 +1,31 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.API/Controllers/CategoriesController.cs">
+    <Files>
+      <File FileName="BlogApp.Core/Entities/User.cs" Line="15" Column="29" />
+      <File FileName="BlogApp.Core/Repositories/IUserRepository.cs" Line="8" Column="50" />
+      <File FileName="BlogApp.API/Controllers/CategoriesController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BloggApp" expanded="True">
+            <Node name="BlogApp.API" expanded="True" />
+            <Node name="BlogApp.BL" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="Implements" expanded="True" />
+                <Node name="Interfaces" expanded="True" selected="True" />
+              </Node>
+            </Node>
+            <Node name="BlogApp.Core">
+              <Node name="Entities" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -9,30 +33,9 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.DAL/Repositories/GenericRepository.cs">
-    <Files>
-      <File FileName="BlogApp.Core/Repositories/IGenericRepository.cs" Line="13" Column="26" />
-      <File FileName="BlogApp.Core/Repositories/ICategoryRepository.cs" Line="7" Column="2" />
-      <File FileName="BlogApp.DAL/Repositories/GenericRepository.cs" Line="47" Column="10" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.Core">
-              <Node name="Repositories" expanded="True" />
-            </Node>
-            <Node name="BlogApp.DAL">
-              <Node name="Repositories" expanded="True">
-                <Node name="GenericRepository.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

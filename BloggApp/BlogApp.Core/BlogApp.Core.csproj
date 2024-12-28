@@ -8,8 +8,12 @@
 
   <ItemGroup>
     <None Remove="Repositories\" />
+    <None Remove="Helpers\" />
+    <None Remove="Helpers\Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Helpers\Enums\" />
   </ItemGroup>
 </Project>

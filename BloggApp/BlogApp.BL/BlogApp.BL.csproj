@@ -9,4 +9,20 @@
   <ItemGroup>
     <ProjectReference Include="..\BlogApp.DAL\BlogApp.DAL.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTOs\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Implements\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="DTOs\CategoryDtos\" />
+    <None Remove="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implements\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="DTOs\CategoryDtos\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
 </Project>

@@ -11,7 +11,8 @@ namespace BlogApp.DAL
 		public static IServiceCollection AddRepositories(this IServiceCollection services)
 		{
 			services.AddScoped<ICategoryRepository, CategoryRepository>();
-			return services;
+			services.AddScoped<IUserRepository, UserRepository>();
+            return services;
 		}
 	}
 }
