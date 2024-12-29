@@ -26,7 +26,6 @@ public class UserService : IUserService
             Username = dto.Username,
             Fullname = dto.Fullname,
             Email = dto.Email,
-            BirthDate = dto.BirthDate,
             Age = dto.Age,
             IsFemale = dto.IsFemale,
             IsBanned = false,
@@ -39,7 +38,7 @@ public class UserService : IUserService
     
     public async Task Login(LoginDto dto)
     {
-        var user = await _repo.GetUserByUsernameAsync(dto.Username);
+        var user = await _repo.GetUserByUsernameAsync(dto.UsernameOrEmail);
         if (user == null)
             throw new Exception("Username not found!");
         if (!HashHelper.VerifyHashedPassword(user.PasswordHash,dto.Password))

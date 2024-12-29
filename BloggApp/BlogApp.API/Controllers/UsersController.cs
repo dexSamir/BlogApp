@@ -26,7 +26,7 @@ namespace BlogApp.API.Controllers
         public async Task<IActionResult> Login(LoginDto dto)
         {
             await _service.Login(dto); 
-            return Ok($"Welcome {dto.Username}!");
+            return Ok($"Welcome {dto.UsernameOrEmail}!");
         }
 
     }

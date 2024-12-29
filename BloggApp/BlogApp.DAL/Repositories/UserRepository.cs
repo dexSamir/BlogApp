@@ -8,10 +8,10 @@ namespace BlogApp.DAL.Repositories
 {
     public class UserRepository : GenericRepository<User>, IUserRepository
     {
-        readonly BlogAppDbContext _context; 
+        readonly BlogAppDbContext _context;
         public UserRepository(BlogAppDbContext context) : base(context)
         {
-            _context = context; 
+            _context = context;
         }
 
         public async Task AddAysnc(User user)
@@ -20,6 +20,15 @@ namespace BlogApp.DAL.Repositories
         public async Task<bool> ExistsByUsername(string username)
             => await _context.Users.AnyAsync(x => x.Username == username);
 
+        public User GetCurrentUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetCurrentUserId()
+        {
+            throw new NotImplementedException();
+        }
 
         public async Task<User?> GetUserByUsernameAsync(string username)
         {

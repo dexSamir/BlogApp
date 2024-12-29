@@ -17,6 +17,8 @@
     <None Remove="DTOs\CategoryDtos\" />
     <None Remove="Helpers\" />
     <None Remove="DTOs\UserDtos\" />
+    <None Remove="Validators\" />
+    <None Remove="Validators\UserValidators\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -26,5 +28,7 @@
     <Folder Include="DTOs\CategoryDtos\" />
     <Folder Include="Helpers\" />
     <Folder Include="DTOs\UserDtos\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Validators\UserValidators\" />
   </ItemGroup>
 </Project>
