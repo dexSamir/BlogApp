@@ -19,6 +19,8 @@
     <None Remove="DTOs\UserDtos\" />
     <None Remove="Validators\" />
     <None Remove="Validators\UserValidators\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Exceptions\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -30,5 +32,10 @@
     <Folder Include="DTOs\UserDtos\" />
     <Folder Include="Validators\" />
     <Folder Include="Validators\UserValidators\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Exceptions\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 </Project>

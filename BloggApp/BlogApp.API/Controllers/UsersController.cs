@@ -19,13 +19,13 @@ namespace BlogApp.API.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
-            await _service.Register(dto);
+            //await _service.Register(dto);
             return Ok("Successfully registered!");
         }
         [HttpPost("[action]")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
-            await _service.Login(dto); 
+            //await _service.Login(dto); 
             return Ok($"Welcome {dto.UsernameOrEmail}!");
         }
 

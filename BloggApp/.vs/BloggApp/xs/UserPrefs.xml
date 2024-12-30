@@ -1,5 +1,6 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -8,30 +9,23 @@
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/DTOs/UserDtos/RegisterDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Services/Interfaces/IUserService.cs">
     <Files>
-      <File FileName="BlogApp.BL/Helpers/HashHelper.cs" />
-      <File FileName="BlogApp.BL/Services/Implements/UserService.cs" Line="34" Column="38" />
-      <File FileName="BlogApp.BL/DTOs/UserDtos/RegisterDto.cs" Line="16" Column="1" />
+      <File FileName="BlogApp.BL/Exceptions/Common/NotFoundException.cs" Line="19" Column="9" />
+      <File FileName="BlogApp.BL/Exceptions/IBaseException.cs" Line="7" Column="12" />
+      <File FileName="BlogApp.BL/Exceptions/Common/ExistException.cs" Line="21" Column="1" />
+      <File FileName="BlogApp.BL/Services/Implements/AuthService.cs" Line="27" Column="1" />
+      <File FileName="BlogApp.BL/Services/Implements/UserService.cs" Line="12" Column="36" />
+      <File FileName="BlogApp.BL/Services/Interfaces/IUserService.cs" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.API" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="UserDtos" expanded="True">
-                  <Node name="RegisterDto.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Helpers" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="Implements" expanded="True" />
-                <Node name="Interfaces" expanded="True" />
-              </Node>
+            <Node name="BlogApp.API" expanded="True" />
+            <Node name="BlogApp.BL" selected="True" />
+            <Node name="BlogApp.Core" expanded="True">
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -39,9 +33,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/Controllers/UsersController.cs" relfile="BlogApp.API/Controllers/UsersController.cs" line="21" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

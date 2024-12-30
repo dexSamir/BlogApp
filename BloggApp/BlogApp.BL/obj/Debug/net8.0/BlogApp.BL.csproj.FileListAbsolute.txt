@@ -1,3 +1,9 @@
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.AssemblyReference.cache
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.sourcelink.json
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.deps.json
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.pdb
@@ -5,12 +11,6 @@
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.DAL.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.DAL.pdb
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.Core.pdb
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.AssemblyReference.cache
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.GeneratedMSBuildEditorConfig.editorconfig
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfoInputs.cache
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfo.cs
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.CoreCompileInputs.cache
-/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.sourcelink.json
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.CopyComplete
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/obj/Debug/net8.0/refint/BlogApp.BL.dll

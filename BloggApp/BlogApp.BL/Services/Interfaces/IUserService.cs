@@ -7,8 +7,7 @@ using BlogApp.BL.DTOs.UserDtos;
 namespace BlogApp.BL.Services.Interfaces;
 public interface IUserService
 {
-    Task Register(RegisterDto dto);
-    Task Login(LoginDto dto); 
+
 }
 
 
