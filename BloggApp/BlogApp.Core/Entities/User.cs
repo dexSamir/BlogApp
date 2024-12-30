@@ -10,7 +10,7 @@ namespace BlogApp.Core.Entities
 		public bool IsFemale{ get; set; }
 		public string Email { get; set; }
 		public string PasswordHash { get; set; }
-		public int Role { get; set; }
+		public int Role { get; set; } = 2;  
 		public bool IsBanned { get; set; }
 		public DateTime UnlockTime { get; set; }
 	}

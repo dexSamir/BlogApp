@@ -1,5 +1,30 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BloggApp">
+            <Node name="BlogApp.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="BlogApp.BL" expanded="True">
+              <Node name="Exceptions" expanded="True">
+                <Node name="Common" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Implements" expanded="True">
+                  <Node name="UserService.cs" selected="True" />
+                </Node>
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
@@ -8,30 +33,6 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Services/Interfaces/IUserService.cs">
-    <Files>
-      <File FileName="BlogApp.BL/Exceptions/Common/NotFoundException.cs" Line="19" Column="9" />
-      <File FileName="BlogApp.BL/Exceptions/IBaseException.cs" Line="7" Column="12" />
-      <File FileName="BlogApp.BL/Exceptions/Common/ExistException.cs" Line="21" Column="1" />
-      <File FileName="BlogApp.BL/Services/Implements/AuthService.cs" Line="27" Column="1" />
-      <File FileName="BlogApp.BL/Services/Implements/UserService.cs" Line="12" Column="36" />
-      <File FileName="BlogApp.BL/Services/Interfaces/IUserService.cs" Line="10" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.API" expanded="True" />
-            <Node name="BlogApp.BL" selected="True" />
-            <Node name="BlogApp.Core" expanded="True">
-              <Node name="Repositories" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

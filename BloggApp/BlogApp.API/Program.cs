@@ -3,6 +3,7 @@ using BlogApp.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using BlogApp.BL.Services.Implements;
 using BlogApp.BL.Services.Interfaces;
+using BlogApp.BL;
 
 namespace TogrulAPI
 {
@@ -21,7 +22,10 @@ namespace TogrulAPI
             builder.Services.AddDbContext<BlogAppDbContext>(opt =>
                 opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
             builder.Services.AddRepositories();
-            builder.Services.AddScoped<IUserService, UserService>(); 
+            builder.Services.AddServices();
+            builder.Services.AddFluentValidation();
+            builder.Services.AddAutoMapper();
+             
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

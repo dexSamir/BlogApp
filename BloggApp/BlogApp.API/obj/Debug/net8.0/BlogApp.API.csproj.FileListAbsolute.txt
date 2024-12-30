@@ -253,3 +253,7 @@
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/obj/Debug/net8.0/BlogApp.API.pdb
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/obj/Debug/net8.0/BlogApp.API.genruntimeconfig.cache
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/obj/Debug/net8.0/ref/BlogApp.API.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/AutoMapper.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll

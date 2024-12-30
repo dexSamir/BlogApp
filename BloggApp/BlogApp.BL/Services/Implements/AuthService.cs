@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using BlogApp.BL.DTOs.UserDtos;
 using BlogApp.BL.Exceptions.Common;
 using BlogApp.BL.Helpers;
@@ -12,8 +13,10 @@ namespace BlogApp.BL.Services.Implements
     public class AuthService : IAuthService
     {
         readonly IUserRepository _repo;
-        public AuthService(IUserRepository repo)
+        readonly IMapper _mapper;
+        public AuthService(IUserRepository repo, IMapper mapper)
         {
+            _mapper = mapper; 
             _repo = repo; 
         }
 
@@ -28,9 +31,21 @@ namespace BlogApp.BL.Services.Implements
             return HashHelper.VerifyHashedPassword(user.PasswordHash, dto.Password).ToString(); 
         }
 
-        public Task RegisterAsync(RegisterDto dto)
+        public async Task RegisterAsync(RegisterDto dto)
         {
-            throw new NotImplementedException();
+            var user = await _repo.GetAll()
+                .Where(x => x.Username == dto.Username || x.Email == dto.Username)
+                .FirstOrDefaultAsync();
+            if(user != null)
+            {
+                if (user.Email == dto.Email)
+                    throw new ExistException($"{dto.Email} is already exists");
+                if (user.Username == dto.Username)
+                    throw new ExistException($"{dto.Username} is already exists");
+            }
+            user = _mapper.Map<User>(dto);
+            await _repo.AddAsync(user);
+            await _repo.SaveAsync(); 
         }
     }
 }

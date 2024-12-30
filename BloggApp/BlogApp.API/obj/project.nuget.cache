@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Hk9Wv3CiXfWBYRrcjqj0OGpUMdv55E5+vqHZ5FxH4VB0QKtsBERLfc4OA8bcoNPV6YfhNd38YqdXQvKfKtIFmg==",
+  "dgSpecHash": "27O4qPjfdzpTalCPkIeShbJVYxdabQgCQmZp9wbp9CaHTqqJa2P/mcCFqc+m1ugekZ7wmDVoluDW6ZRuATKZ6w==",
   "success": true,
   "projectFilePath": "/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/BlogApp.API.csproj",
   "expectedPackageFiles": [
+    "/Users/samirhebibov/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/samirhebibov/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/samirhebibov/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/samirhebibov/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "/Users/samirhebibov/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/samirhebibov/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/samirhebibov/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",
