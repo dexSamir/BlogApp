@@ -1,21 +1,17 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Services/Implements/AuthService.cs">
+    <Files>
+      <File FileName="BlogApp.BL/Services/Implements/AuthService.cs" Line="30" Column="29" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BloggApp">
-            <Node name="BlogApp.API" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="Exceptions" expanded="True">
-                <Node name="Common" expanded="True" />
-              </Node>
+          <Node name="BloggApp" expanded="True">
+            <Node name="BlogApp.BL">
               <Node name="Services" expanded="True">
                 <Node name="Implements" expanded="True">
-                  <Node name="UserService.cs" selected="True" />
+                  <Node name="AuthService.cs" selected="True" />
                 </Node>
-                <Node name="Interfaces" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -24,8 +20,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -33,7 +27,9 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

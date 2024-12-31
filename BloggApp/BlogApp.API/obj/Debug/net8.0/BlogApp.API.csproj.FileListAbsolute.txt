@@ -257,3 +257,8 @@
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
