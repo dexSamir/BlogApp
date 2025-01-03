@@ -15,9 +15,11 @@ public static class ServiceRegistration
 {
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
+        services.AddHttpContextAccessor();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
+        services.AddScoped<IEmailService, EmailService>(); 
         return services;
     }
     public static IServiceCollection AddFluentValidation(this IServiceCollection services)

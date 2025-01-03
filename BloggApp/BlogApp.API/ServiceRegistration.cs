@@ -12,6 +12,7 @@ namespace BlogApp.API
 		public static IServiceCollection AddJwtOptions(this IServiceCollection services, IConfiguration configuration)
 		{
 			services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.Jwt));
+			services.Configure<SmtpOptions>(configuration.GetSection(SmtpOptions.Name));
 			return services; 
 		}
 		public static IServiceCollection AddAuth(this IServiceCollection services, IConfiguration configuration)
