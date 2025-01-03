@@ -5,6 +5,7 @@ using System.Text;
 using AutoMapper;
 using BlogApp.BL.DTOs.UserDtos;
 using BlogApp.BL.Exceptions.Common;
+using BlogApp.BL.ExternalServices.Interfaces;
 using BlogApp.BL.Helpers;
 using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Entities;
@@ -20,45 +21,26 @@ namespace BlogApp.BL.Services.Implements
     {
         readonly IUserRepository _repo;
         readonly IMapper _mapper;
-        public AuthService(IUserRepository repo, IMapper mapper)
+        readonly IJwtTokenHandler _tokenHandler;
+        public AuthService(IUserRepository repo, IMapper mapper, IJwtTokenHandler tokenHandler)
         {
+            _tokenHandler = tokenHandler; 
             _mapper = mapper; 
             _repo = repo; 
         }
 
         public async Task<string> LoginAsync(LoginDto dto)
         {
+
             var user = await _repo.GetAll()
                 .Where(x => x.Username == dto.UsernameOrEmail || x.Email == dto.UsernameOrEmail)
                 .FirstOrDefaultAsync();
             if (user == null)
                 throw new NotFoundException<User>();
 
-            List<Claim> claims =
-                [
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim (ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role.ToString()),
-                    new Claim("Fullname", user.Fullname)
-                ];
-            
+           
 
-            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Salam"));
-
-            SigningCredentials cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            JwtSecurityToken jwt = new JwtSecurityToken(
-                issuer: "https://localhost:7067",
-                audience: "https://localhost:7067",
-                claims: claims,
-                notBefore: DateTime.Now,
-                expires: DateTime.Now.AddHours(36),
-                signingCredentials: cred
-                );
-
-            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-
-            return handler.WriteToken(jwt);
+            return _tokenHandler.CreateToken(user, 12);
         }
 
         public async Task RegisterAsync(RegisterDto dto)
@@ -66,6 +48,7 @@ namespace BlogApp.BL.Services.Implements
             var user = await _repo.GetAll()
                 .Where(x => x.Username == dto.Username || x.Email == dto.Username)
                 .FirstOrDefaultAsync();
+
             if(user != null)
             {
                 if (user.Email == dto.Email)

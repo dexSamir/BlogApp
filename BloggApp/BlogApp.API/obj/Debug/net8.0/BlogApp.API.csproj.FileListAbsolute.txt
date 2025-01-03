@@ -262,3 +262,10 @@
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
