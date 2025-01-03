@@ -8,7 +8,7 @@ using BlogApp.API;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
-namespace TogrulAPI
+namespace BlogApp
 {
     public class Program
     {
