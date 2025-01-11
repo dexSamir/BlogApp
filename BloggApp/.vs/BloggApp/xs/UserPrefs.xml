@@ -1,45 +1,31 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.Core/Entities/User.cs">
-    <Files>
-      <File FileName="BlogApp.API/appsettings.Development.json" Line="13" Column="18" />
-      <File FileName="BlogApp.BL/ExternalServices/Implements/EmailService.cs" Line="41" Column="27" />
-      <File FileName="BlogApp.API/Controllers/AuthController.cs" Line="1" Column="1" />
-      <File FileName="BlogApp.BL/Services/Implements/AuthService.cs" Line="60" Column="21" />
-      <File FileName="BlogApp.BL/DTOs/UserDtos/RegisterDto.cs" Line="12" Column="43" />
-      <File FileName="BlogApp.Core/Entities/User.cs" Line="14" Column="37" />
-      <File FileName="BlogApp.DAL/Context/BlogAppDbContext.cs" Line="9" Column="56" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.API" expanded="True">
-              <Node name="appsettings.json" expanded="True" />
-            </Node>
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="Options" expanded="True" />
-                <Node name="UserDtos" expanded="True" />
-              </Node>
-              <Node name="Helpers" expanded="True" />
-              <Node name="Services" expanded="True">
+            <Node name="BlogApp.BL">
+              <Node name="ExternalServices" expanded="True">
                 <Node name="Implements" expanded="True" />
               </Node>
-            </Node>
-            <Node name="BlogApp.Core" expanded="True">
-              <Node name="Entities" expanded="True">
-                <Node name="User.cs" selected="True" />
+              <Node name="Services" expanded="True">
+                <Node name="Implements">
+                  <Node name="AuthService.cs" selected="True" />
+                </Node>
+                <Node name="Interfaces" expanded="True" />
               </Node>
-            </Node>
-            <Node name="BlogApp.DAL" expanded="True">
-              <Node name="Context" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -47,9 +33,4 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

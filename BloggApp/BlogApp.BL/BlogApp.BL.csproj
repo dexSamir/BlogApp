@@ -26,6 +26,7 @@
     <None Remove="ExternalServices\" />
     <None Remove="ExternalServices\Interfaces\" />
     <None Remove="ExternalServices\Implements\" />
+    <None Remove="Exceptions\AuthExceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -44,6 +45,7 @@
     <Folder Include="ExternalServices\" />
     <Folder Include="ExternalServices\Interfaces\" />
     <Folder Include="ExternalServices\Implements\" />
+    <Folder Include="Exceptions\AuthExceptions\" />
   </ItemGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />

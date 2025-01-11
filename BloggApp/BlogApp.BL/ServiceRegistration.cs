@@ -19,7 +19,10 @@ public static class ServiceRegistration
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
-        services.AddScoped<IEmailService, EmailService>(); 
+        services.AddScoped<IEmailService, EmailService>();
+
+
+        services.AddMemoryCache(); 
         return services;
     }
     public static IServiceCollection AddFluentValidation(this IServiceCollection services)

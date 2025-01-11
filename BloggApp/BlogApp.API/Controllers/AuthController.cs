@@ -26,5 +26,15 @@ namespace BlogApp.API.Controllers
         {
             return Ok(await _service.LoginAsync(dto));
         }
+        [HttpPost]
+        public async Task<IActionResult> SendVereficationEmail(string email)
+        {
+            return Ok(await _service.SendVereficationEmailAsync(email));
+        }
+        [HttpPost]
+        public async Task<IActionResult> VerifyEmail(string email, int code)
+        {
+            return Ok(await _service.VerifyAccoundAsync(email, code));
+        }
     }
 }

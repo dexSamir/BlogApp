@@ -1,14 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BlogApp.BL">
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="ConnectedServicesFolder" selected="True" />
+            <Node name="BlogApp.BL">
               <Node name="Dependencies" expanded="True" />
             </Node>
           </Node>
@@ -16,7 +13,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

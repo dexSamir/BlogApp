@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using BlogApp.Core.Entities;
 using BlogApp.Core.Entities.Common;
 using BlogApp.Core.Repositories;
@@ -29,16 +30,14 @@ namespace BlogApp.DAL.Repositories
         public async Task<T?> GetByIdAsync(int id)
             => await Table.FindAsync(id);
 
-        public IQueryable<T> GetWhere(Func<T, bool> expression)
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression)
             => Table.Where(expression).AsQueryable();
 
         public async Task<bool> IsExistAsync(int id)
             => await Table.AnyAsync(x => x.Id == id); 
 
         public void Remove(T entity)
-        {
-            Table.Remove(entity);
-        }
+            => Table.Remove(entity);
 
         public async Task<bool> RemoveAsync(int id)
         {
@@ -47,8 +46,10 @@ namespace BlogApp.DAL.Repositories
         }
 
         public async Task<int> SaveAsync()
-            => await _context.SaveChangesAsync(); 
-    }
+            => await _context.SaveChangesAsync();
 
+        public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
+            => await Table.AnyAsync(expression);
+    }
 }
 
