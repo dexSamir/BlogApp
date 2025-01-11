@@ -21,7 +21,7 @@ public static class ServiceRegistration
         services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
         services.AddScoped<IEmailService, EmailService>();
 
-
+        services.AddHttpContextAccessor(); 
         services.AddMemoryCache(); 
         return services;
     }

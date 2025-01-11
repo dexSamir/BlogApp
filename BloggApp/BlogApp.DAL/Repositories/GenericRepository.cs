@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq.Expressions;
+using System.Security.Claims;
 using BlogApp.Core.Entities;
 using BlogApp.Core.Entities.Common;
 using BlogApp.Core.Repositories;
 using BlogApp.DAL.Context;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.DAL.Repositories
@@ -11,10 +13,12 @@ namespace BlogApp.DAL.Repositories
     public class GenericRepository<T> : IGenericRepository<T>
         where T : BaseEntity, new()
     {
+        readonly IHttpContextAccessor _http; 
         readonly BlogAppDbContext _context;
         protected DbSet<T> Table => _context.Set<T>();
-        public GenericRepository(BlogAppDbContext context)
+        public GenericRepository(BlogAppDbContext context, IHttpContextAccessor http)
         {
+            _http = http; 
             _context = context; 
         }
 
@@ -50,6 +54,19 @@ namespace BlogApp.DAL.Repositories
 
         public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
             => await Table.AnyAsync(expression);
+
+        public string GetCurrentUserName()
+        {
+            return _http.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value; 
+        }
+
+        public async Task<User?> GetCurrentUserAsync()
+        {
+            string userName = GetCurrentUserName();
+            if (string.IsNullOrWhiteSpace(userName))
+                return null;
+            return await _context.Users.Where(x => x.Username == userName).FirstOrDefaultAsync(); 
+        }
     }
 }
 

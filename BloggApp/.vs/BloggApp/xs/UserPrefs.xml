@@ -1,31 +1,29 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.BL">
-              <Node name="ExternalServices" expanded="True">
-                <Node name="Implements" expanded="True" />
+            <Node name="BlogApp.Core">
+              <Node name="Entities">
+                <Node name="Blog.cs" selected="True" />
               </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Implements">
-                  <Node name="AuthService.cs" selected="True" />
-                </Node>
-                <Node name="Interfaces" expanded="True" />
-              </Node>
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="BlogApp.DAL">
+              <Node name="Migrations" expanded="True" />
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -33,4 +31,5 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

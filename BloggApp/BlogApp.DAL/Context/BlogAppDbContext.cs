@@ -8,6 +8,7 @@ namespace BlogApp.DAL.Context
 	{
         public DbSet<Category> Categories { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
 
         public BlogAppDbContext( DbContextOptions<BlogAppDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

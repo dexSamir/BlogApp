@@ -2,6 +2,7 @@
 using BlogApp.Core.Entities;
 using BlogApp.Core.Repositories;
 using BlogApp.DAL.Context;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.DAL.Repositories
@@ -9,9 +10,11 @@ namespace BlogApp.DAL.Repositories
     public class UserRepository : GenericRepository<User>, IUserRepository
     {
         readonly BlogAppDbContext _context;
-        public UserRepository(BlogAppDbContext context) : base(context)
+        readonly IHttpContextAccessor _http; 
+        public UserRepository(BlogAppDbContext context, IHttpContextAccessor http) : base(context, http)
         {
             _context = context;
+            _http = http; 
         }
 
         public async Task AddAysnc(User user)
@@ -20,20 +23,8 @@ namespace BlogApp.DAL.Repositories
         public async Task<bool> ExistsByUsername(string username)
             => await _context.Users.AnyAsync(x => x.Username == username);
 
-        public User GetCurrentUser()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetCurrentUserId()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<User?> GetUserByUsernameAsync(string username)
-        {
-            return await _context.Users.Where(x => x.Username == username).FirstOrDefaultAsync();
-        }
+            => await _context.Users.Where(x => x.Username == username).FirstOrDefaultAsync();
     }
 }
 

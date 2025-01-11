@@ -126,7 +126,7 @@ namespace BlogApp.BL.Services.Implements
 
             var user = await _repo.GetWhere(x => x.Email == email).FirstOrDefaultAsync();
             user!.IsVerified = true;
-            user.Role = (int)Roles.Publisher;
+            user.Role = user.Role | (int)Roles.Publisher;
             await _repo.SaveAsync();
             return true; 
         }

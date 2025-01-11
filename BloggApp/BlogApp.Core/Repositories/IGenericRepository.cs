@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
+using BlogApp.Core.Entities;
 
 namespace BlogApp.Core.Repositories
 {
@@ -14,7 +15,9 @@ namespace BlogApp.Core.Repositories
 		Task AddRangeAsync(params T[] entities);
 		void Remove(T entity); 
 		Task<bool> RemoveAsync(int id);
-		Task<int> SaveAsync(); 
-	}
+		Task<int> SaveAsync();
+        string GetCurrentUserName();
+        Task<User?> GetCurrentUserAsync();
+    }
 }
 

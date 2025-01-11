@@ -18,6 +18,7 @@ namespace BlogApp.Core.Entities
         public bool IsConfirmed { get; set; } 
         public string? ConfirmationToken { get; set; }
 		public bool IsVerified { get; set; }
+		public IEnumerable<Blog>? Blogs { get; set; } 
     }
 }
 

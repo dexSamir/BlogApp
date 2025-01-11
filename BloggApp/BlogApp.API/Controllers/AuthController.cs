@@ -36,5 +36,11 @@ namespace BlogApp.API.Controllers
         {
             return Ok(await _service.VerifyAccoundAsync(email, code));
         }
+        [HttpGet("{number}")]
+        public async Task<IActionResult> Bitwise(int number)
+        {
+            int a = 32 | 4 | 2 | 1; 
+            return Ok((a & number) == number); 
+        }
     }
 }

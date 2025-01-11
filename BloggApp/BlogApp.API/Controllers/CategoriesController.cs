@@ -1,3 +1,4 @@
+using BlogApp.BL.DTOs.CategoryDtos;
 using BlogApp.Core.Entities;
 using BlogApp.Core.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -34,7 +35,7 @@ namespace BlogApp.API.Controllers
 
         // POST api/<CategoriesController>
         [HttpPost]
-        public async Task<IActionResult> Post(Category category)
+        public async Task<IActionResult> Post(CategoryCreateDto category)
         {
             await _repo.AddAsync(category);
             await _repo.SaveAsync();

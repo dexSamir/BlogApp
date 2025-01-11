@@ -36,7 +36,7 @@ public class JwtTokenHandler : IJwtTokenHandler
                 audience: "https://localhost:7067",
                 claims: claims,
                 notBefore: DateTime.Now,
-                expires: DateTime.Now.AddSeconds(36),
+                expires: DateTime.Now.AddDays(36),
                 signingCredentials: cred);
 
         JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();

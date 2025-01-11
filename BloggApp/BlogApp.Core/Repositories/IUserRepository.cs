@@ -8,8 +8,6 @@ public interface IUserRepository : IGenericRepository<User>
 	Task<User?> GetUserByUsernameAsync(string username);
 	Task<bool> ExistsByUsername(string username);
 	Task AddAysnc(User user);
-	int GetCurrentUserId();
-	User GetCurrentUser();
 
 }
 
