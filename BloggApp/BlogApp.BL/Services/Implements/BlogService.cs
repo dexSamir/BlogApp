@@ -4,15 +4,19 @@ using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Repositories;
 using BlogApp.Core.Entities;
 using BlogApp.BL.Exceptions.Common;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace BlogApp.BL.Services.Implements;
 public class BlogService : IBlogService
 {
     readonly IBlogRepository _repo;
+    readonly IMapper _mapper; 
     readonly ICategoryRepository _catRepo; 
-    public BlogService(IBlogRepository repo, ICategoryRepository catRepo)
+    public BlogService(IBlogRepository repo, ICategoryRepository catRepo, IMapper mapper)
     {
-        _catRepo = catRepo; 
+        _catRepo = catRepo;
+        _mapper = mapper; 
         _repo = repo; 
     }
 
@@ -24,17 +28,18 @@ public class BlogService : IBlogService
         if (user == null)
             throw new NotFoundException<User>();
 
-        var blog = new Blog
-        {
-            Title = dto.Title,
-            Content = dto.Content,
-            CategoryId = dto.CategoryId,
-            ViewCount = 0,
-            Publisher = user
-        }; 
+        var blog = _mapper.Map<Blog>(dto);
+        blog.Publisher = user; 
+
         await _repo.AddAsync(blog);
         await _repo.SaveAsync();
         return blog.Id; 
+    }
+
+    public async Task<List<BlogGetDto>> GetAllAsync()
+    {
+        var blogs = await _repo.GetAll("Category", "Publisher").ToListAsync();
+        return _mapper.Map<List<BlogGetDto>>(blogs);
     }
 }
 

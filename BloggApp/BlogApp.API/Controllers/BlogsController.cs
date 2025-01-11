@@ -17,6 +17,11 @@ namespace BlogApp.API.Controllers
             _service = service; 
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _service.GetAllAsync());
+        }
         [HttpPost]
         public async Task<IActionResult> Create(BlogCreateDto dto)
         {

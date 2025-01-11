@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq.Expressions;
 using System.Security.Claims;
 using BlogApp.Core.Entities;
@@ -28,8 +29,15 @@ namespace BlogApp.DAL.Repositories
         public async Task AddRangeAsync(params T[] entities)
             => await Table.AddRangeAsync(entities);
 
-        public IQueryable<T> GetAll()
-            => Table.AsQueryable();
+        public IQueryable<T> GetAll(params string[] includes)
+        {
+            var query = Table.AsQueryable();
+            foreach (var include in includes)
+            {
+                query = query.Include(include); 
+            }
+            return query; 
+        }
 
         public async Task<T?> GetByIdAsync(int id)
             => await Table.FindAsync(id);

@@ -20,6 +20,7 @@ public static class ServiceRegistration
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
         services.AddScoped<IEmailService, EmailService>();
+        services.AddScoped<IBlogService, BlogService>();
 
         services.AddHttpContextAccessor(); 
         services.AddMemoryCache(); 

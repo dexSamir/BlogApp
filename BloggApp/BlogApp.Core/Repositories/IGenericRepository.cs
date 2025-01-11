@@ -6,7 +6,7 @@ namespace BlogApp.Core.Repositories
 {
 	public interface IGenericRepository<T> where T : BaseEntity, new()
 	{
-		IQueryable<T> GetAll();
+		IQueryable<T> GetAll(params string[] includes);
 		Task<T?> GetByIdAsync(int id);
 		IQueryable<T> GetWhere(Expression<Func<T, bool>> expression);
 		Task<bool> IsExistAsync(Expression<Func<T, bool>> expression);
