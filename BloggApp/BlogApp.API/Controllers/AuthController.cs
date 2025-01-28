@@ -33,7 +33,7 @@ public class AuthController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> VerifyEmail(string email, int code)
     {
-        return Ok(await _service.VerifyAccoundAsync(email, code));
+        return Ok(await _service.VerifyAccountAsync(email, code));
     }
     [HttpGet("{number}")]
     public async Task<IActionResult> Bitwise(int number)

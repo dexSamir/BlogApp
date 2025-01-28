@@ -7,7 +7,7 @@ public interface IAuthService
 {
 	Task<string> LoginAsync(LoginDto dto);
 	Task RegisterAsync(RegisterDto dto);
-	Task<int> SendVereficationEmailAsync(string email);  
-    Task<bool> VerifyAccoundAsync(string email, int code); 
+    Task<bool> VerifyAccountAsync(string email, int code);
+    Task<string> SendVereficationEmailAsync(string email);
 }
 
