@@ -3,27 +3,34 @@ using System.Net;
 using System.Net.Mail;
 using BlogApp.BL.DTOs.Options;
 using BlogApp.BL.ExternalServices.Interfaces;
+using BlogApp.DAL.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 namespace BlogApp.BL.ExternalServices.Implements;
 
 public class EmailService : IEmailService
 {
-    readonly SmtpClient _client;
-    readonly MailAddress _from;
-    readonly HttpContext Context;
+    readonly IOptions<SmtpOptions> _options;
+    readonly IMemoryCache _cache; 
+    readonly BlogAppDbContext _context;
+    readonly IConfiguration _configuration;
 
-    public EmailService(IOptions<SmtpOptions> option, IHttpContextAccessor acc)
+    public EmailService(
+        IOptions<SmtpOptions> options,
+        BlogAppDbContext context,
+        IConfiguration configuration,
+        IMemoryCache cache)
     {
-        var opt = option.Value;
-        _client = new(opt.Host, opt.Port);
-        _client.Credentials = new NetworkCredential(opt.Sender, opt.Password);
-        _client.EnableSsl = true;
-        _from = new MailAddress(opt.Sender, "Blog App");
-        Context = acc.HttpContext; 
+        _cache = cache;
+        _options = options;
+        _configuration = configuration; 
+        _context = context;
+
     }
 
     public void SendEmailConfirmation(HttpRequest request, string receiver, string name, string token)

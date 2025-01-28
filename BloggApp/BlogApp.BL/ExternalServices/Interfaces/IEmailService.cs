@@ -5,6 +5,8 @@ namespace BlogApp.BL.ExternalServices.Interfaces;
 
 public interface IEmailService
 {
-	void SendEmailConfirmation(HttpRequest request, string reciever, string name, string token);	
+	Task<string> EmailVereficationToken(string email);	
+	Task<string> SendEmailVerefication(string email);
+    Task<bool> VerifyEmailAsync(string email, int code);
 }
 
