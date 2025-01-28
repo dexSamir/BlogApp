@@ -29,6 +29,7 @@
     <None Remove="Exceptions\AuthExceptions\" />
     <None Remove="DTOs\BlogDtos\" />
     <None Remove="Exceptions\UserExceptions\" />
+    <None Remove="Constant\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -50,6 +51,7 @@
     <Folder Include="Exceptions\AuthExceptions\" />
     <Folder Include="DTOs\BlogDtos\" />
     <Folder Include="Exceptions\UserExceptions\" />
+    <Folder Include="Constant\" />
   </ItemGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -59,6 +61,7 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
   </ItemGroup>
 </Project>

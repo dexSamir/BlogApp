@@ -29,7 +29,7 @@ public class BlogService : IBlogService
             throw new NotFoundException<User>();
 
         var blog = _mapper.Map<Blog>(dto);
-        blog.Publisher = user; 
+        blog.User = user; 
 
         await _repo.AddAsync(blog);
         await _repo.SaveAsync();

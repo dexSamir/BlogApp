@@ -1,32 +1,11 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/ExternalServices/Implements/JwtTokenHandler.cs">
-    <Files>
-      <File FileName="BlogApp.BL/ExternalServices/Implements/EmailService.cs" Line="1" Column="1" />
-      <File FileName="BlogApp.BL/ExternalServices/Implements/JwtTokenHandler.cs" Line="18" Column="27" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BloggApp" expanded="True">
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="UserDtos" expanded="True" />
-              </Node>
-              <Node name="ExternalServices" expanded="True">
-                <Node name="Implements" expanded="True" />
-                <Node name="Interfaces" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Implements" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="BlogApp.DAL" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/ExternalServices/Implements/EmailService.cs" relfile="BlogApp.BL/ExternalServices/Implements/EmailService.cs" line="107" column="1" />
+      <Breakpoint file="/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/ExternalServices/Implements/EmailService.cs" relfile="BlogApp.BL/ExternalServices/Implements/EmailService.cs" line="65" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -34,9 +13,34 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.Core/Entities/User.cs">
+    <Files>
+      <File FileName="BlogApp.Core/Entities/User.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BloggApp">
+            <Node name="BlogApp.BL" expanded="True">
+              <Node name="ExternalServices" expanded="True">
+                <Node name="Implements" expanded="True" />
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Implements" expanded="True" />
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="BlogApp.Core" expanded="True">
+              <Node name="Entities" expanded="True">
+                <Node name="User.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

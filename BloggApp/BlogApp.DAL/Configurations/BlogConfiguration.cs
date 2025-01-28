@@ -11,9 +11,10 @@ public class BlogConfiguration : IEntityTypeConfiguration<Blog>
         builder.HasOne(x => x.Category)
             .WithMany(x => x.Blogs)
             .HasForeignKey(x => x.CategoryId);
-        builder.HasOne(x => x.Publisher)
+
+        builder.HasOne(x => x.User)
             .WithMany(x => x.Blogs)
-            .HasForeignKey(x => x.PublisherId); 
+            .HasForeignKey(x => x.UserId); 
     }
 }
 
