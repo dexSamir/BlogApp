@@ -30,6 +30,7 @@
     <None Remove="DTOs\BlogDtos\" />
     <None Remove="Exceptions\UserExceptions\" />
     <None Remove="Constant\" />
+    <None Remove="Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -52,6 +53,7 @@
     <Folder Include="DTOs\BlogDtos\" />
     <Folder Include="Exceptions\UserExceptions\" />
     <Folder Include="Constant\" />
+    <Folder Include="Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />

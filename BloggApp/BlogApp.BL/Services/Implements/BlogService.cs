@@ -26,7 +26,6 @@ public class BlogService : IBlogService
         _mapper = mapper; 
         _repo = repo; 
     }
-
     public async Task<int> CreateAsync(BlogCreateDto dto)
     {
         if (!await _catRepo.IsExistAsync(dto.CategoryId))

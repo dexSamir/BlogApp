@@ -1,4 +1,7 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -6,40 +9,36 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/ExternalServices/Implements/EmailService.cs" relfile="BlogApp.BL/ExternalServices/Implements/EmailService.cs" line="107" column="1" />
-      <Breakpoint file="/Users/samirhebibov/Desktop/BlogApp/BloggApp/BlogApp.BL/ExternalServices/Implements/EmailService.cs" relfile="BlogApp.BL/ExternalServices/Implements/EmailService.cs" line="65" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.API/BlogApp.API.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Services/Implements/BlogService.cs">
     <Files>
-      <File FileName="BlogApp.API/BlogApp.API.csproj" Line="7" Column="33" />
+      <File FileName="BlogApp.BL/Services/Implements/BlogService.cs" Line="36" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BloggApp" expanded="True">
+          <Node name="BloggApp">
+            <Node name="BlogApp.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
             <Node name="BlogApp.BL" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="BlogDtos" expanded="True" />
-              </Node>
-              <Node name="ExternalServices" expanded="True">
-                <Node name="Implements" expanded="True" />
+              <Node name="DTOs" expanded="True" />
+              <Node name="Exceptions" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="UserExceptions" expanded="True" />
               </Node>
               <Node name="Services" expanded="True">
                 <Node name="Implements" expanded="True" />
               </Node>
             </Node>
-            <Node name="BlogApp.DAL" expanded="True">
-              <Node name="Migrations" expanded="True" />
+            <Node name="BlogApp.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
