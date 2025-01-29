@@ -16,8 +16,6 @@ namespace BlogApp.Core.Repositories
 		void Remove(T entity); 
 		Task<bool> RemoveAsync(int id);
 		Task<int> SaveAsync();
-        string GetCurrentUserName();
-        Task<User?> GetCurrentUserAsync();
     }
 }
 

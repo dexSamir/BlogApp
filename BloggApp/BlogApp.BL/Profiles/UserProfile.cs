@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogApp.BL.DTOs.UserDtos;
 using BlogApp.BL.Helpers;
 using BlogApp.Core.Entities;
@@ -13,7 +12,8 @@ public class UserProfile : Profile
 			.ForMember(x=> x.PasswordHash, x=> x.MapFrom(y=>
 			  HashHelper.HashPassword(y.Password)));
 		CreateMap<User, UserNestedGetDto>(); 
-			
-	}
+		CreateMap<User, UserGetDto>();
+
+    }
 }
 

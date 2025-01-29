@@ -6,7 +6,6 @@ using BlogApp.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.BL.Services.Implements;
-
 public class CategoryService : ICategoryService
 {
 	readonly ICategoryRepository _repo;

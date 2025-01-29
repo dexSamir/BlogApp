@@ -1,5 +1,4 @@
-﻿using System;
-using BlogApp.Core.Helpers.Enums;
+﻿using BlogApp.Core.Helpers.Enums;
 
 namespace BlogApp.Core.Entities;
 public class User : BaseEntity
@@ -8,7 +7,7 @@ public class User : BaseEntity
 	public string Fullname { get; set; }
 	public int Age { get; set; }
 	public DateOnly BirthDate { get; set; }
-	public bool IsFemale{ get; set; }
+	public bool IsMale{ get; set; }
 	public string Email { get; set; }
 	public string PasswordHash { get; set; }
 	public int Role { get; set; } = (int)Roles.Viewer; 
@@ -19,5 +18,6 @@ public class User : BaseEntity
 	public bool IsVerified { get; set; }
 	public IEnumerable<Blog>? Blogs { get; set; }
 	public DateTime? BanEndTime { get; set; }
+	public string? Image { get; set; }
 }
 

@@ -8,8 +8,10 @@ public class BlogProfile : Profile
 {
 	public BlogProfile()
 	{
+		CreateMap<BlogCreateDto, Blog>()
+			.ForMember(x=> x.CoverImage, z=> z.Ignore());
+		
 		CreateMap<Blog, BlogGetDto>();
-		CreateMap<BlogCreateDto, Blog>(); 
 	}
 }
 

@@ -11,7 +11,7 @@ public class BlogGetDto
 	public string Content { get; set; }
 	public string ViewCount { get; set; }
 	public DateTime CreatedTime { get; set; }
-	public UserNestedGetDto Publisher { get; set; }
+	public UserNestedGetDto User { get; set; }
 	public CategoryNestedGetDto Category { get; set; }
 
 }

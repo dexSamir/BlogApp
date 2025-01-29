@@ -1,10 +1,7 @@
-﻿using System;
-using BlogApp.BL.ExternalServices.Implements;
+﻿using BlogApp.BL.ExternalServices.Implements;
 using BlogApp.BL.ExternalServices.Interfaces;
 using BlogApp.BL.Services.Implements;
 using BlogApp.BL.Services.Interfaces;
-using BlogApp.Core.Repositories;
-using BlogApp.DAL.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,10 +15,12 @@ public static class ServiceRegistration
         services.AddHttpContextAccessor();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ICategoryService, CategoryService>();
-        services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
-        services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IBlogService, BlogService>();
 
+
+        services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
+        services.AddScoped<IEmailService, EmailService>();
+        services.AddScoped<ICurrentUser, CurrentUser>(); 
         services.AddHttpContextAccessor(); 
         services.AddMemoryCache(); 
         return services;

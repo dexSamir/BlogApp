@@ -1,5 +1,4 @@
-﻿using System;
-namespace BlogApp.Core.Entities;
+﻿namespace BlogApp.Core.Entities;
 public class Blog : BaseEntity
 {
 	public string Title { get; set; }

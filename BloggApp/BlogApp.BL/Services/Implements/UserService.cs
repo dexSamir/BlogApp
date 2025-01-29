@@ -11,7 +11,5 @@ namespace BlogApp.BL.Services.Implements;
 
 public class UserService : IUserService
 {
-    
-
 }
 
