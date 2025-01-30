@@ -1,7 +1,23 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Attributes/AuthAttribute.cs">
+    <Files>
+      <File FileName="BlogApp.BL/ExternalServices/Implements/CurrentUser.cs" Line="1" Column="1" />
+      <File FileName="BlogApp.BL/Attributes/AuthAttribute.cs" Line="12" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BloggApp">
+            <Node name="BlogApp.BL" expanded="True">
+              <Node name="Attributes" expanded="True">
+                <Node name="AuthAttribute.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -9,36 +25,10 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlogApp.BL/Services/Implements/BlogService.cs">
-    <Files>
-      <File FileName="BlogApp.BL/Services/Implements/BlogService.cs" Line="36" Column="9" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BloggApp">
-            <Node name="BlogApp.API" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="BlogApp.BL" expanded="True">
-              <Node name="DTOs" expanded="True" />
-              <Node name="Exceptions" expanded="True">
-                <Node name="Common" expanded="True" />
-                <Node name="UserExceptions" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Implements" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="BlogApp.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BlogApp.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

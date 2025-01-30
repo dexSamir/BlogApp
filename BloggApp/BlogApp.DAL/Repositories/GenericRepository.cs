@@ -21,38 +21,59 @@ public class GenericRepository<T> : IGenericRepository<T>
     public async Task AddRangeAsync(params T[] entities)
         => await Table.AddRangeAsync(entities);
 
-    public IQueryable<T> GetAll(params string[] includes)
+    public async Task<IEnumerable<T>> GetAllAsync(params string[] includes)
+        => await _checkIncludes(Table, includes).ToListAsync(); 
+
+    public async Task<T?> GetByIdAsync(int id, params string[] includes)
     {
-        var query = Table.AsQueryable();
-        foreach (var include in includes)
-        {
-            query = query.Include(include); 
-        }
-        return query; 
+         if(includes == null)
+            return await Table.FindAsync(id);
+
+        return await _checkIncludes(Table, includes).FirstOrDefaultAsync(x=> x.Id == id); 
+    }
+    public async Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> expression, params string[] includes)
+    {
+        return await _checkIncludes(Table.Where(expression), includes).ToListAsync();
     }
 
-    public async Task<T?> GetByIdAsync(int id)
-        => await Table.FindAsync(id);
-
-    public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression)
-        => Table.Where(expression).AsQueryable();
-
     public async Task<bool> IsExistAsync(int id)
-        => await Table.AnyAsync(x => x.Id == id); 
+        => await Table.AnyAsync(x => x.Id == id);
 
-    public void Remove(T entity)
-        => Table.Remove(entity);
+    public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
+        => await Table.AnyAsync(expression);
 
-    public async Task<bool> RemoveAsync(int id)
+    public async void Delete(T entity, params string[] includes)
     {
-        int result = await Table.Where(x=>x.Id == id).ExecuteDeleteAsync();
-        return result > 0; 
+        _checkIncludes(Table, includes);
+        Table.Remove(entity); 
+    }
+
+    public async Task DeleteAndSaveAsync(int id)
+    {
+        await Table.Where(x=>x.Id == id).ExecuteDeleteAsync();
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var entity = await GetByIdAsync(id);
+        Table.Remove(entity!);
     }
 
     public async Task<int> SaveAsync()
         => await _context.SaveChangesAsync();
 
-    public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
-        => await Table.AnyAsync(expression);
+    public Task<T> GetFirstAsync(Expression<Func<T, bool>> expression, params string[] includes)
+    {
+        throw new NotImplementedException();
+    }
+
+    IQueryable<T> _checkIncludes(IQueryable<T> query, params string[] includes)
+    {
+        if (includes is not null && includes.Length != 0)
+            foreach (var include in includes)
+                query = query.Include(include);
+
+        return query;
+    }
 }
 
