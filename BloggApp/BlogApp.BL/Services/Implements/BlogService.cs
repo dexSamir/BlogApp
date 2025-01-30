@@ -3,7 +3,6 @@ using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Repositories;
 using BlogApp.Core.Entities;
 using BlogApp.BL.Exceptions.Common;
-using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using BlogApp.BL.ExternalServices.Interfaces;
 
@@ -40,10 +39,10 @@ public class BlogService : IBlogService
         return blog.Id; 
     }
 
-    public async Task<List<BlogGetDto>> GetAllAsync()
+    public async Task<IEnumerable<BlogGetDto>> GetAllAsync() 
     {
-        var blogs = await _repo.GetAll("Category", "User").ToListAsync();
-        return _mapper.Map<List<BlogGetDto>>(blogs);
+        var blogs = await _repo.GetAllAsync("Category", "User");
+        return _mapper.Map<IEnumerable<BlogGetDto>>(blogs);
     }
 }
 

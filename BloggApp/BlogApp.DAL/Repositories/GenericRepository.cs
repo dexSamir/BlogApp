@@ -42,10 +42,9 @@ public class GenericRepository<T> : IGenericRepository<T>
     public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
         => await Table.AnyAsync(expression);
 
-    public async void Delete(T entity, params string[] includes)
+    public async void Delete(T entity)
     {
-        _checkIncludes(Table, includes);
-        Table.Remove(entity); 
+        Table.Remove(entity);  
     }
 
     public async Task DeleteAndSaveAsync(int id)
@@ -62,9 +61,9 @@ public class GenericRepository<T> : IGenericRepository<T>
     public async Task<int> SaveAsync()
         => await _context.SaveChangesAsync();
 
-    public Task<T> GetFirstAsync(Expression<Func<T, bool>> expression, params string[] includes)
+    public async Task<T?> GetFirstAsync(Expression<Func<T, bool>> expression, params string[] includes)
     {
-        throw new NotImplementedException();
+        return await _checkIncludes(Table, includes).Where(expression).FirstOrDefaultAsync(); 
     }
 
     IQueryable<T> _checkIncludes(IQueryable<T> query, params string[] includes)

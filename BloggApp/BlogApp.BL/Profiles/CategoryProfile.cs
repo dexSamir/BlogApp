@@ -9,7 +9,7 @@ public class CategoryProfile : Profile
 	public CategoryProfile()
 	{
 		CreateMap<Category, CategoryNestedGetDto>();
-
+		CreateMap<Category, CategoryListItem>(); 
 	}
 }
 

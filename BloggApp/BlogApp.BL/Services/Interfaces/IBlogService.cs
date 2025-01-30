@@ -6,6 +6,6 @@ namespace BlogApp.BL.Services.Interfaces;
 public interface IBlogService
 {
 	Task<int> CreateAsync(BlogCreateDto dto);
-	Task<List<BlogGetDto>> GetAllAsync();
+	Task<IEnumerable<BlogGetDto>> GetAllAsync();
 }
 

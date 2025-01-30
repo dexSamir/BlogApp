@@ -1,23 +1,13 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogApp.BL.DTOs.UserDtos;
-using BlogApp.BL.Exceptions.AuthExceptions;
 using BlogApp.BL.Exceptions.Common;
 using BlogApp.BL.ExternalServices.Interfaces;
-using BlogApp.BL.Helpers;
 using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Entities;
-using BlogApp.Core.Helpers.Enums;
 using BlogApp.Core.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ValueGeneration;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
 
 namespace BlogApp.BL.Services.Implements;
 public class AuthService : IAuthService
@@ -48,9 +38,9 @@ public class AuthService : IAuthService
     public async Task<string> LoginAsync(LoginDto dto)
     {
 
-        var user = await _repo.GetAll()
-            .Where(x => x.Username == dto.UsernameOrEmail || x.Email == dto.UsernameOrEmail)
-            .FirstOrDefaultAsync();
+        var user = await _repo
+            .GetFirstAsync(x => x.Username == dto.UsernameOrEmail || x.Email == dto.UsernameOrEmail);
+
         if (user == null)
             throw new NotFoundException<User>();
 
@@ -59,10 +49,9 @@ public class AuthService : IAuthService
 
     public async Task RegisterAsync(RegisterDto dto)
     {
-        var user = await _repo.GetAll()
-            .Where(x => x.Username == dto.Username || x.Email == dto.Email)
-            .FirstOrDefaultAsync();
-
+        var user = await _repo
+            .GetFirstAsync(x => x.Username == dto.Username || x.Email == dto.Email); 
+           
         if (user != null)
         {
             if (user.Email == dto.Email)

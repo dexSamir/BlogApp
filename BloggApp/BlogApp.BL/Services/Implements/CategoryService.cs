@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using BlogApp.BL.DTOs.CategoryDtos;
 using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Entities;
@@ -8,10 +9,12 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.BL.Services.Implements;
 public class CategoryService : ICategoryService
 {
+    readonly IMapper _mapper; 
 	readonly ICategoryRepository _repo;
-	public CategoryService(ICategoryRepository repo)
+	public CategoryService(ICategoryRepository repo, IMapper mapper)
 	{
-		_repo = repo; 
+        _mapper = mapper; 
+        _repo = repo; 
 	}
 
     public async Task<int> CreateAsync(CategoryCreateDto dto)
@@ -24,12 +27,8 @@ public class CategoryService : ICategoryService
 
     public async Task<IEnumerable<CategoryListItem>> GetAllAsync()
     {
-        return await _repo.GetAll().Select(x => new CategoryListItem
-        {
-            Name = x.Name,
-            Icon = x.Icon,
-            Id = x.Id
-        }).ToListAsync();
+        var categories = await _repo.GetAllAsync();
+        return _mapper.Map<IEnumerable<CategoryListItem>>(categories); 
     }
 }
 
